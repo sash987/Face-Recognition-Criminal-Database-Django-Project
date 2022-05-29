@@ -1,0 +1,49 @@
+{% extends 'navbar.html' %}
+{% block content %}
+<a class="btn border border-dark mt-4 col-md-1 mx-4 container-fluid text-center" href="http://localhost:8000" role="button">Back</a>
+  <br>
+    <div class="container-fluid">
+    <div class="card mb-3 mx-auto mt-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQdTrZCoOQYFdaA9_QOKBicFCAPY9k1IMhbw&usqp=CAU" alt="" width="200" height="200">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Detect Criminal by realtime video</h5>
+            <p class="card-text">Detect if a criminal record is present in the database by starting camera in a live video</p>
+            <a href="/face_recognition_cam/" class="btn btn-primary">Start Camera</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3 mx-auto mt-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPAITAOAHwHt4XjxddO-wpGEiJuvmBWyV5pg&usqp=CAU" alt="" width="200" height="200">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Detect Criminal by criminal image</h5>
+            <p class="card-text">Detect if a criminal record is present in the database by uploading an image of the criminal</p>
+            <a href="/face_recognition_img/" class="btn btn-primary">Detect</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="card mb-3 mx-auto mt-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQdTrZCoOQYFdaA9_QOKBicFCAPY9k1IMhbw&usqp=CAU" alt="" width="200" height="200">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Detect Criminal by CCTV footage</h5>
+              <p class="card-text">Detect if a criminal record is present in the database by uploading a CCTV footage of the crime place</p>
+              <a href="/face_recognition_video/" class="btn btn-primary">See CCTV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock content %}

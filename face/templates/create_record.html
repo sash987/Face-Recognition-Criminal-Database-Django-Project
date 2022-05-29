@@ -1,0 +1,23 @@
+{% extends 'navbar.html' %}
+{% block content %}
+<a class="btn border border-dark mt-4 col-md-1 mx-4 container-fluid text-center" href="http://localhost:8000" role="button">Back</a>
+    <div class="container-fluid ">
+    <div class="row ">
+        <div class ="col-sm-6 mx-auto mx-5 mt-5 mb-5 ">
+            <h1 class="text-center">CREATE CRIMINAL DATABASE</h1>
+            <h4 class="text-center">Enter all the information of the Criminal</h4>
+            <br>
+            <br>
+            {% include 'messages.html' %}
+            <form method="POST"  action="/create_record/" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="btn btn-success mt-3 container-fluid text-center" value="Add criminal data ">
+                <br>
+                <a class="btn btn-success mt-3 container-fluid text-center" href="/view/" role="button">View</a>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    {% endblock content %}

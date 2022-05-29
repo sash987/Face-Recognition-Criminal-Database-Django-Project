@@ -1,0 +1,78 @@
+{% extends 'navbar.html' %}
+{% block content %}
+    <br>
+    <div class="container-fluid ">
+    <div class="card mb-3 mx-auto mt-6" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9JaaEwZPidu8ReDwH2LVzLwiEYQ_8qW1wmw&usqp=CAU" alt="criminal" width="200" height="200">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Create criminal database</h5>
+            <p class="card-text">Create a criminal record to store criminal information in the database</p>
+            <a href="create_record/" class="btn btn-primary">Create</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3 mx-auto mt-4" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnyBO3iIWpgzfif5F06tN9fuK79_xTJ9-34A&usqp=CAU" alt="database" width="200" height="200">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">View criminals database</h5>
+            <p class="card-text">View all the criminal records in the database </p>
+            <a href="/view/" class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3 mx-auto mt-4" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWuKAddefRVsfDIUZnay4ivnIFypQIl8GXgw&usqp=CAU"  alt="edit" width="200" height="200">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Edit criminal database</h5>
+            <p class="card-text">Update the information of a criminal in the database</p>
+            <a href="/view/" class="btn btn-primary">Update</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3 mx-auto mt-4" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUWrr50HIeeqSQNewWW_kZsSwzKzwACJ0BOQ&usqp=CAU" alt="Delete" width="200" height="200">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="class-title">Delete criminal record </h5>
+            <p class="card-text">Delete a criminal record from the database completely</p>
+            <a href="/view/" class="btn btn-primary">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3 mx-auto mt-4" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQguLCk0HoWTq_CNPymBWrQ_uu7jwzTu1g9LQ&usqp=CAU" alt="Face recognition" width="200" height="200">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Face recognition</h5>
+            <p class="card-text">Identify the criminal through face recognition techniques using different sources</p>
+            <a href="/face_rec/" class="btn btn-primary">Detect faces</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    {% endblock content %}

@@ -1,0 +1,51 @@
+{% extends 'navbar.html' %}
+{% block content %}
+<a class="btn border border-dark mt-3 col-md-1 mx-2 container-fluid text-center" href="http://localhost:8000" role="button">Back</a>
+      <div class="container">
+        <div class ="col-sm-12 mt-3 ">
+          <h1>Criminal Database</h1>
+          {% include 'messages.html' %}
+            {% if criminal %}
+                <table class="table table-hover table-bordered border-5 border-white table-dark text-center mt-3">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">fathers_name</th>
+                            <th scope="col">gender</th>
+                            <th scope="col">age</th>
+                            <th scope="col">crime</th>
+                            <th scope="col">crime_image</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in criminal %}
+                        <tr>
+                            <th scope="row">{{i.name}}</th>
+                            <th scope="col">{{i.fathers_name}}</th>
+                            <th scope="col">{{i.gender}}</th>
+                            <th scope="col">{{i.age}}</th>
+                            <th scope="col">{{i.crime}}</th>
+                            <th scope="col"><img src='/media/{{i.crime_image}}' class="" alt=""></th>
+                            <td>
+                                <a href="{% url 'edit' i.id %}"
+                                class="btn btn-success btn-md">Edit</a>
+                                <form action="{% url 'delete' i.id %}"
+                                method="post" class="d-inline" > {% csrf_token %}
+                                    <input type="submit" class="btn btn-danger"
+                                    value="Delete">
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            {% else %}
+                <h4>No record </h4>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+
+{% endblock content %}

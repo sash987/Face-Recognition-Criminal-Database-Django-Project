@@ -1,0 +1,38 @@
+{% extends 'navbar.html' %}
+{% block content %}
+<a class="btn border border-dark mt-4 col-md-1 mx-4 container-fluid text-center" href="/face_rec/" role="button">Back</a>
+      <div class="container">
+        <div class ="col-sm-12 mt-3">
+            {% if criminal %}
+                <table class="table table-hover table-bordered border-5 border-white table-dark text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">fathers_name</th>
+                            <th scope="col">gender</th>
+                            <th scope="col">age</th>
+                            <th scope="col">crime</th>
+                            <th scope="col">crime_image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in criminal %}
+                        <tr>
+                            <td>{{ i.name }}</td>
+                            <td>{{ i.fathers_name }}</td>
+                            <td>{{ i.gender }}</td>
+                            <td>{{ i.age }}</td>
+                            <td>{{ i.crime }}</td>
+                            <th scope="col"><img src='/media/{{i.crime_image}}' class="" alt=""></th>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            {% else %}
+                <h4>No record </h4>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+    {% endblock content %}
